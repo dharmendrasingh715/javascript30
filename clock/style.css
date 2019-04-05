@@ -28,14 +28,32 @@ body {
 }
 
 .clock {
-    align-items: center;
-    background: #ffffff;
-    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform: translateY(-3px);
 }
 
 .hand {
     background: navy;
     height: 5px;
     width: 50%;
+    top: 50%;
     position: absolute;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: rotate 50ms;
+    transition-timing-function: cubic-bezier(0.76, 0.49, 0.45, 1.29);
+}
+
+.min-hand {
+    width: 40%;
+    background: #04c6f3;
+    left: 10%;
+}
+
+.hour-hand {
+    width: 30%;
+    background: red;
+    left: 20%;
 }
